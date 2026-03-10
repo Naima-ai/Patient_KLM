@@ -1,0 +1,350 @@
+{
+  "patient": {
+    "patient_id": "P-001",
+    "name": "demo-user-1",
+    "dob": "1978-04-12",
+    "sex": "Female",
+    "ethnicity": "North African",
+    "blood_type": "A+",
+    "baseline_conditions": [
+      "hypertension (mild, diet-controlled)",
+      "family history of renal cell carcinoma (maternal uncle)"
+    ]
+  },
+  "ehr_visits": [
+    {
+      "visit_id": "V-20220310",
+      "patient_id": "P-001",
+      "visit_date": "2022-03-10",
+      "visit_type": "outpatient nephrology",
+      "chief_complaint": "Annual nephrology follow-up for hypertension monitoring and family history of renal cell carcinoma. Reports mild seasonal fatigue but otherwise feeling well.",
+      "vitals": {
+        "blood_pressure": "128/82",
+        "heart_rate": 72,
+        "temperature_celsius": 36.8,
+        "weight_kg": 68.5,
+        "bmi": 24.2
+      },
+      "symptoms": [
+        "mild seasonal fatigue"
+      ],
+      "physical_exam_findings": [
+        "Normal cardiovascular examination",
+        "No peripheral edema",
+        "Abdomen soft, non-tender, no masses palpable",
+        "No costovertebral angle tenderness",
+        "Normal skin color and hydration"
+      ],
+      "lab_results": {
+        "creatinine_mg_dl": 0.9,
+        "egfr_ml_min": 95,
+        "bun_mg_dl": 15,
+        "potassium_meq_l": 4.2,
+        "sodium_meq_l": 140,
+        "hemoglobin_g_dl": 13.4,
+        "urinalysis": {
+          "protein": "negative",
+          "blood": "negative",
+          "rbc_per_hpf": "0-1",
+          "specific_gravity": "1.018"
+        }
+      },
+      "imaging": {
+        "type": "none",
+        "findings": "No imaging performed at this visit"
+      },
+      "diagnosis_codes": [
+        "ICD-10: I10 - Essential hypertension",
+        "ICD-10: Z87.891 - Personal history of nicotine dependence",
+        "ICD-10: Z80.51 - Family history of kidney cancer"
+      ],
+      "medications": [
+        "Continue current diet-controlled hypertension management",
+        "Multivitamin daily",
+        "Adequate hydration recommended"
+      ],
+      "clinical_notes": "44-year-old North African female with well-controlled mild hypertension presents for routine nephrology follow-up. Patient reports only mild seasonal fatigue, likely related to spring allergies. Blood pressure remains well-controlled with dietary modifications. Renal function excellent with eGFR >90 and normal urinalysis. Given family history of renal cell carcinoma in maternal uncle, continued annual monitoring appropriate. Patient counseled on maintaining healthy lifestyle, adequate hydration, and blood pressure monitoring.",
+      "follow_up_plan": "Continue annual nephrology follow-up in 12 months. Patient to monitor blood pressure at home monthly. Return sooner if develops hematuria, significant hypertension, or concerning urinary symptoms. Discussed importance of maintaining healthy diet and regular exercise for cardiovascular and renal health.",
+      "clinical_stage": "healthy"
+    },
+    {
+      "visit_id": "V-20220915",
+      "patient_id": "P-001",
+      "visit_date": "2022-09-15",
+      "visit_type": "outpatient nephrology",
+      "chief_complaint": "Annual nephrology follow-up, mild seasonal fatigue",
+      "vitals": {
+        "blood_pressure": "128/82",
+        "heart_rate": 72,
+        "temperature_celsius": 36.8,
+        "weight_kg": 68.5,
+        "bmi": 24.2
+      },
+      "symptoms": [
+        "mild seasonal fatigue"
+      ],
+      "physical_exam_findings": [
+        "no peripheral edema",
+        "normal cardiovascular exam",
+        "no abdominal masses",
+        "no costovertebral angle tenderness"
+      ],
+      "lab_results": {
+        "creatinine_mg_dl": 0.9,
+        "egfr_ml_min": 95,
+        "bun_mg_dl": 18,
+        "potassium_meq_l": 4.2,
+        "sodium_meq_l": 140,
+        "hemoglobin_g_dl": 13.4,
+        "urinalysis": {
+          "protein": "negative",
+          "blood": "negative",
+          "rbc_per_hpf": "0-1",
+          "specific_gravity": "1.018"
+        }
+      },
+      "imaging": {
+        "type": "none",
+        "findings": "no imaging performed"
+      },
+      "diagnosis_codes": [
+        "ICD-10: I10 - Essential hypertension",
+        "ICD-10: Z87.891 - Personal history of nicotine dependence",
+        "ICD-10: Z80.51 - Family history of kidney cancer"
+      ],
+      "medications": [
+        "lifestyle modifications for blood pressure control"
+      ],
+      "clinical_notes": "44-year-old North African female presents for routine annual nephrology follow-up. Patient reports mild seasonal fatigue but otherwise feels well. Blood pressure remains well-controlled with dietary modifications. No urinary symptoms, no edema. Family history significant for maternal uncle with renal cell carcinoma. Physical examination unremarkable. Laboratory studies show excellent renal function with eGFR >90 and normal urinalysis. Blood pressure slightly elevated but consistent with mild hypertension managed with lifestyle interventions.",
+      "follow_up_plan": "Continue current lifestyle modifications for blood pressure management. Annual nephrology follow-up in 12 months. Patient counseled on maintaining adequate hydration and continuing current diet. No acute intervention needed. Return sooner if develops urinary symptoms, significant hypertension, or other concerns.",
+      "clinical_stage": "healthy"
+    },
+    {
+      "visit_id": "V-20230220",
+      "patient_id": "P-001",
+      "visit_date": "2023-02-20",
+      "visit_type": "outpatient nephrology",
+      "chief_complaint": "Occasional left flank discomfort and intermittent pink-tinged urine over the past 3 weeks",
+      "vitals": {
+        "blood_pressure": "142/88",
+        "heart_rate": 78,
+        "temperature_celsius": 36.8,
+        "weight_kg": 68.5,
+        "bmi": 24.3
+      },
+      "symptoms": [
+        "intermittent left flank discomfort",
+        "mild hematuria",
+        "occasional fatigue"
+      ],
+      "physical_exam_findings": [
+        "mild left costovertebral angle tenderness",
+        "no palpable masses",
+        "normal abdominal examination",
+        "bilateral lower extremity edema absent"
+      ],
+      "lab_results": {
+        "creatinine_mg_dl": 1.15,
+        "egfr_ml_min": 77,
+        "bun_mg_dl": 22,
+        "potassium_meq_l": 4.2,
+        "sodium_meq_l": 138,
+        "hemoglobin_g_dl": 12.8,
+        "urinalysis": {
+          "protein": "1+ (mild proteinuria)",
+          "blood": "2+ microscopic hematuria",
+          "rbc_per_hpf": "8-12",
+          "specific_gravity": "1.018"
+        }
+      },
+      "imaging": {
+        "type": "none",
+        "findings": "Deferred at this visit - will consider renal ultrasound if symptoms persist"
+      },
+      "diagnosis_codes": [
+        "ICD-10: R31.9 (Hematuria, unspecified)",
+        "ICD-10: N23 (Unspecified renal colic)",
+        "ICD-10: I10 (Essential hypertension)"
+      ],
+      "medications": [
+        "Continue current dietary modifications for hypertension",
+        "Adequate hydration counseling provided"
+      ],
+      "clinical_notes": "45-year-old North African female with mild diet-controlled hypertension and family history of RCC (maternal uncle) presents with new onset intermittent left flank discomfort and microscopic hematuria. eGFR shows mild decline from baseline (previously >90). Creatinine elevated from baseline 0.9 to 1.15. Mild proteinuria noted. Physical exam notable for mild CVA tenderness but no palpable masses. Given family history and presentation, close monitoring warranted.",
+      "follow_up_plan": "Return in 4-6 weeks for repeat labs including CBC, CMP, urinalysis. Patient advised to monitor symptoms and return sooner if worsening flank pain or gross hematuria. Consider renal imaging if no improvement. Continue dietary management of hypertension. Patient counseled on adequate hydration and to avoid NSAIDs.",
+      "clinical_stage": "early_symptoms"
+    },
+    {
+      "visit_id": "V-20231108",
+      "patient_id": "P-001",
+      "visit_date": "2023-11-08",
+      "visit_type": "outpatient nephrology",
+      "chief_complaint": "Intermittent left flank discomfort and episodes of pink-tinged urine over the past 6 weeks",
+      "vitals": {
+        "blood_pressure": "138/82",
+        "heart_rate": 76,
+        "temperature_celsius": 36.8,
+        "weight_kg": 68.5,
+        "bmi": 24.2
+      },
+      "symptoms": [
+        "intermittent left flank discomfort",
+        "mild hematuria",
+        "occasional fatigue"
+      ],
+      "physical_exam_findings": [
+        "mild left costovertebral angle tenderness",
+        "no palpable masses",
+        "no peripheral edema",
+        "normal heart sounds",
+        "lungs clear bilaterally"
+      ],
+      "lab_results": {
+        "creatinine_mg_dl": 1.15,
+        "egfr_ml_min": 78,
+        "bun_mg_dl": 22,
+        "potassium_meq_l": 4.2,
+        "sodium_meq_l": 140,
+        "hemoglobin_g_dl": 12.8,
+        "urinalysis": {
+          "protein": "1+ (30 mg/dL)",
+          "blood": "2+",
+          "rbc_per_hpf": "5-10",
+          "specific_gravity": "1.018"
+        }
+      },
+      "imaging": {
+        "type": "ultrasound",
+        "findings": "Bilateral kidneys normal in size and echogenicity. No hydronephrosis or obvious masses visualized. Left kidney measures 11.2 cm, right kidney 10.8 cm."
+      },
+      "diagnosis_codes": [
+        "ICD-10: N39.0 - Urinary tract infection, site not specified",
+        "ICD-10: R31.9 - Hematuria, unspecified",
+        "ICD-10: I10 - Essential hypertension"
+      ],
+      "medications": [
+        "continue current dietary modifications for hypertension",
+        "increase fluid intake"
+      ],
+      "clinical_notes": "45-year-old North African female with mild hypertension and family history of renal cell carcinoma presents with new onset intermittent left flank discomfort and microscopic hematuria. Laboratory studies show slight decline in eGFR from baseline (previous 85 ml/min) and mild proteinuria. Creatinine trending upward from baseline 0.9. Renal ultrasound unremarkable. Given family history and constellation of symptoms, will need close monitoring and consideration for further imaging if symptoms persist.",
+      "follow_up_plan": "Return in 6 weeks for repeat labs including comprehensive metabolic panel and urinalysis. Patient counseled to monitor symptoms and return sooner if flank pain worsens or gross hematuria develops. Consider CT urography if symptoms persist or lab values continue to decline. Continue dietary management of hypertension.",
+      "clinical_stage": "early_symptoms"
+    },
+    {
+      "visit_id": "V-20240403",
+      "patient_id": "P-001",
+      "visit_date": "2024-04-03",
+      "visit_type": "outpatient nephrology",
+      "chief_complaint": "Follow-up for worsening hematuria and declining kidney function",
+      "vitals": {
+        "blood_pressure": "142/88",
+        "heart_rate": 78,
+        "temperature_celsius": 36.8,
+        "weight_kg": 68.5,
+        "bmi": 24.2
+      },
+      "symptoms": [
+        "gross hematuria",
+        "mild flank discomfort",
+        "fatigue"
+      ],
+      "physical_exam_findings": [
+        "mild hypertension",
+        "no costovertebral angle tenderness",
+        "no palpable masses",
+        "normal heart sounds",
+        "clear lung fields"
+      ],
+      "lab_results": {
+        "creatinine_mg_dl": 1.5,
+        "egfr_ml_min": 58,
+        "bun_mg_dl": 28,
+        "potassium_meq_l": 4.2,
+        "sodium_meq_l": 140,
+        "hemoglobin_g_dl": 11.8,
+        "urinalysis": {
+          "protein": "1+ proteinuria",
+          "blood": "3+ hematuria",
+          "rbc_per_hpf": ">50",
+          "specific_gravity": "1.018"
+        }
+      },
+      "imaging": {
+        "type": "CT",
+        "findings": "3.2cm enhancing mass in right kidney, suspicious for renal cell carcinoma. No lymphadenopathy or metastases identified."
+      },
+      "diagnosis_codes": [
+        "ICD-10: C64.1 - Malignant neoplasm of right kidney",
+        "ICD-10: N18.3 - Chronic kidney disease, stage 3",
+        "ICD-10: I10 - Essential hypertension",
+        "ICD-10: R31.9 - Hematuria, unspecified"
+      ],
+      "medications": [
+        "lisinopril 10mg daily",
+        "amlodipine 5mg daily",
+        "iron sulfate 325mg daily",
+        "omeprazole 20mg daily"
+      ],
+      "clinical_notes": "45-year-old North African female with declining renal function and CT findings consistent with renal cell carcinoma. Biopsy performed by urology confirmed clear cell RCC, stage T1b. eGFR has declined from baseline. Patient counseled on diagnosis and treatment options. Blood pressure remains elevated despite dietary modifications.",
+      "follow_up_plan": "Urgent urology consultation for surgical planning. Nephrology follow-up in 2 weeks to monitor renal function. Optimize blood pressure control. Complete staging workup including chest imaging. Patient education provided regarding RCC and treatment options.",
+      "clinical_stage": "kidney_tumor"
+    },
+    {
+      "visit_id": "V-20241022",
+      "patient_id": "P-001",
+      "visit_date": "2024-10-22",
+      "visit_type": "outpatient nephrology",
+      "chief_complaint": "Follow-up for declining kidney function and persistent hematuria",
+      "vitals": {
+        "blood_pressure": "138/84",
+        "heart_rate": 78,
+        "temperature_celsius": 36.8,
+        "weight_kg": 68.2,
+        "bmi": 24.1
+      },
+      "symptoms": [
+        "hematuria",
+        "mild flank discomfort",
+        "fatigue"
+      ],
+      "physical_exam_findings": [
+        "mild right flank tenderness",
+        "no palpable masses",
+        "no peripheral edema",
+        "normal heart sounds"
+      ],
+      "lab_results": {
+        "creatinine_mg_dl": 1.5,
+        "egfr_ml_min": 58,
+        "bun_mg_dl": 28,
+        "potassium_meq_l": 4.2,
+        "sodium_meq_l": 140,
+        "hemoglobin_g_dl": 11.8,
+        "urinalysis": {
+          "protein": "trace",
+          "blood": "3+",
+          "rbc_per_hpf": "15-20",
+          "specific_gravity": "1.018"
+        }
+      },
+      "imaging": {
+        "type": "CT",
+        "findings": "3.2cm heterogeneous mass in right kidney upper pole with enhancement pattern suspicious for renal cell carcinoma"
+      },
+      "diagnosis_codes": [
+        "ICD-10: C64.1 - Malignant neoplasm of right kidney, except renal pelvis",
+        "ICD-10: N18.3 - Chronic kidney disease, stage 3",
+        "ICD-10: R31.9 - Hematuria, unspecified"
+      ],
+      "medications": [
+        "lisinopril 10mg daily",
+        "amlodipine 5mg daily",
+        "iron sulfate 325mg daily",
+        "omeprazole 20mg daily"
+      ],
+      "clinical_notes": "46-year-old North African female with family history of RCC presents with declining renal function and worsening hematuria. CT imaging reveals 3.2cm right renal mass highly suspicious for RCC. Urology biopsy confirms clear cell renal cell carcinoma, stage T1b. eGFR has declined from baseline to 58 mL/min. Patient counseled on diagnosis and treatment options.",
+      "follow_up_plan": "Continue nephrology monitoring every 3 months. Coordinate care with urology for surgical planning. Monitor renal function closely. Patient education provided regarding CKD management and dietary modifications. Return if symptoms worsen.",
+      "clinical_stage": "kidney_tumor"
+    }
+  ]
+}

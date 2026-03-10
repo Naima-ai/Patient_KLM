@@ -1,0 +1,143 @@
+{
+  "genomic_profile_id": "GEN-NA2024-7842",
+  "patient_id": "P-46F-NAF-001",
+  "profiling_date": "2024-05-15",
+  "profiling_method": "Targeted NGS Panel (NephroGenome v2.1)",
+  "variants": [
+    {
+      "gene": "VHL",
+      "variant_id": "rs387906523",
+      "hgvs_notation": "c.482G>A (p.Arg161Gln)",
+      "zygosity": "heterozygous",
+      "clinical_significance": "pathogenic",
+      "associated_condition": "Clear cell renal cell carcinoma",
+      "evidence_level": "strong",
+      "allele_frequency_population": 0.0001
+    },
+    {
+      "gene": "PBRM1",
+      "variant_id": "rs1456789012",
+      "hgvs_notation": "c.2134C>T (p.Pro712Ser)",
+      "zygosity": "heterozygous",
+      "clinical_significance": "VUS",
+      "associated_condition": "Clear cell renal cell carcinoma",
+      "evidence_level": "limited",
+      "allele_frequency_population": 0.003
+    },
+    {
+      "gene": "BAP1",
+      "variant_id": "rs776543210",
+      "hgvs_notation": "c.1892A>G (p.Lys631Arg)",
+      "zygosity": "heterozygous",
+      "clinical_significance": "benign",
+      "associated_condition": "Renal cell carcinoma predisposition",
+      "evidence_level": "strong",
+      "allele_frequency_population": 0.12
+    },
+    {
+      "gene": "APOL1",
+      "variant_id": "rs73885319",
+      "hgvs_notation": "c.1024A>G (p.Ser342Gly)",
+      "zygosity": "heterozygous",
+      "clinical_significance": "likely pathogenic",
+      "associated_condition": "Chronic kidney disease risk",
+      "evidence_level": "moderate",
+      "allele_frequency_population": 0.08
+    },
+    {
+      "gene": "UMOD",
+      "variant_id": "rs4293393",
+      "hgvs_notation": "c.-1498C>T",
+      "zygosity": "homozygous",
+      "clinical_significance": "benign",
+      "associated_condition": "Chronic kidney disease protection",
+      "evidence_level": "moderate",
+      "allele_frequency_population": 0.31
+    },
+    {
+      "gene": "ACE",
+      "variant_id": "rs1799752",
+      "hgvs_notation": "c.1224+287_1224+287del (I/D polymorphism)",
+      "zygosity": "heterozygous",
+      "clinical_significance": "benign",
+      "associated_condition": "Hypertension susceptibility",
+      "evidence_level": "moderate",
+      "allele_frequency_population": 0.46
+    }
+  ],
+  "polygenic_risk_scores": [
+    {
+      "trait": "Renal Cell Carcinoma",
+      "score": 0.78,
+      "percentile": 84,
+      "interpretation": "High genetic risk for renal cell carcinoma development, consistent with family history and pathogenic VHL variant"
+    },
+    {
+      "trait": "Chronic Kidney Disease",
+      "score": 0.62,
+      "percentile": 71,
+      "interpretation": "Moderately elevated risk for CKD progression, influenced by APOL1 risk variant"
+    },
+    {
+      "trait": "Hypertension",
+      "score": 0.58,
+      "percentile": 67,
+      "interpretation": "Slightly elevated genetic predisposition to hypertension"
+    }
+  ],
+  "pharmacogenomics": [
+    {
+      "gene": "CYP3A4",
+      "variant": "*1/*1 (normal function)",
+      "drug_implication": "Normal metabolism of sunitinib and pazopanib (RCC targeted therapies)"
+    },
+    {
+      "gene": "CYP2D6",
+      "variant": "*1/*2 (normal function)",
+      "drug_implication": "Standard dosing for antihypertensive medications metabolized by CYP2D6"
+    },
+    {
+      "gene": "SLCO1B1",
+      "variant": "*1/*1 (normal function)",
+      "drug_implication": "Normal uptake of statins if needed for cardiovascular risk management"
+    }
+  ],
+  "ancestry_composition": {
+    "North_African": 0.72,
+    "Middle_Eastern": 0.18,
+    "Sub_Saharan_African": 0.1
+  },
+  "mitochondrial_haplogroup": "U6a1",
+  "dna_fragment_ids": [
+    "FRAG-VHL-001",
+    "FRAG-PBRM1-002",
+    "FRAG-APOL1-003"
+  ],
+  "summary_clinical_interpretation": "Pathogenic heterozygous VHL variant (c.482G>A) confirms hereditary clear cell RCC predisposition consistent with family history. APOL1 G1 risk variant may contribute to CKD susceptibility. PBRM1 variant of uncertain significance requires periodic reassessment. Recommend genetic counseling for family members and enhanced RCC surveillance protocols. Standard pharmacotherapy dosing anticipated for targeted RCC therapies.",
+  "dna_sequences": [
+    {
+      "fragment_id": "FRAG-001",
+      "gene_region": "VHL (chr3:10183515-10183615)",
+      "sequence_length": 100,
+      "sequence": "ATGGAGCCTTACCTGTATGCAGGTGCAGACCAGCGGGAGCTGCAGCAGAGCTGCCTGCGCTTCGTGGTGGATGCCAAGATCAAGTTCAACCCC",
+      "mutation_site": "position 67: C>T (p.Pro67Ser)",
+      "clinical_note": "Synthetic fragment representing VHL exon 2 region with pathogenic variant"
+    },
+    {
+      "fragment_id": "FRAG-002",
+      "gene_region": "PBRM1 (chr3:52579100-52579200)",
+      "sequence_length": 100,
+      "sequence": "GAAGTTCAGCAGTTGCAGCAGCAGCAGCAGCAGCAACAGCAGCAGCAGCAGCAGCAGCAGCAGCAGAAGCTGAAGCAGCAGCAGCAGCAGCAG",
+      "mutation_site": "position 43: G>A (intronic, potential splicing effect)",
+      "clinical_note": "Synthetic fragment representing PBRM1 intron/exon boundary; VUS"
+    },
+    {
+      "fragment_id": "FRAG-003",
+      "gene_region": "APOL1 (chr22:36265860-36265960)",
+      "sequence_length": 100,
+      "sequence": "ATGGGAGAGAAAGAGCTGCAGAAGGAGATCAACAAGCAGCAGAAGAAGCTGCAGAAGCAGAAGGAGCTGCAGAAGCAGAAGCTGAAGCAGAAG",
+      "mutation_site": "G1 risk variant absent; G2 risk variant absent (low-risk APOL1 genotype)",
+      "clinical_note": "Synthetic APOL1 fragment; North African ancestry, G1/G2 risk variants checked - not detected"
+    }
+  ]
+}

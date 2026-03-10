@@ -4,7 +4,7 @@ services:
   patient-klm:
     build:
       context: .
-      dockerfile: Dockerfile.patient
+      dockerfile: Dockerfile
     container_name: patient_klm
     ports:
       - "8001:8001"

@@ -10,16 +10,25 @@ Each triple also carries a confidence score, evidence level, source, and timesta
 
 
 ENDPOINTS
+
 The KLM exposes 6 endpoints — 3 for reading data, 3 for writing new data.
+
 -GET /patient/{patient_id}
+
     Returns all triples for a patient as JSON. This is the main endpoint used by the agent. Pass the returned triples directly as context into the Nephrologist Agent's system prompt so it knows the full patient history.
+    
 -GET /patient/{patient_id}/timeline
     Returns the disease progression timeline, diagnoses, lab values, and imaging findings ordered by date. Shows how the patient's condition evolved over time.
+    
 -GET /patient/{patient_id}/genomics
     Returns the DNA and genetic profile
+    
 -POST /patient
+
     Adds a completely new patient to the KLM. Only patient_id and name are required. Optionally include demographics, a first EHR visit, and genomic variants all in one call. Everything is automatically converted to triples and stored immediately.
+    
 {
+
             "patient_id": "P-002",
             "name": "user-1",
             "dob": "1980-03-15",
@@ -43,8 +52,10 @@ The KLM exposes 6 endpoints — 3 for reading data, 3 for writing new data.
 
 
 -POST /patient/{patient_id}/visit
+
     Adds a new EHR visit for an existing patient. Use this when a real patient has a new clinic appointment. All fields are automatically converted to triples and immediately available on the next GET call.
-Example: '{
+    
+{
             "visit_date": "2026-03-10",
             "symptoms": ["increased fatigue", "mild hematuria"],
             "vitals": {"blood_pressure": "138/88", "weight_kg": 67.2},
@@ -55,8 +66,10 @@ Example: '{
           }'
 
 -POST /triple
+
     Adds any single custom triple directly. Use this for anything not covered by the other endpoints — family history, social history, risk factors, allergy notes, or any custom clinical finding.
-Example: '{
+    
+{
             "patient_id": "P-001",
             "head": "P-001",
             "relation": "has_family_history",

@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  patient-klm:
+    build:
+      context: .
+      dockerfile: Dockerfile.patient
+    container_name: patient_klm
+    ports:
+      - "8001:8001"
+    environment:
+      - PATIENT_KLM_DB_PATH=/app/data/patient_klm.db
+    volumes:
+      # Mount data folder so real-time ingested triples persist
+      # even if the container is restarted
+      - ./data:/app/data
+    restart: unless-stopped

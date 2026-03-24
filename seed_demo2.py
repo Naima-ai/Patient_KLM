@@ -30,10 +30,10 @@ PATIENT_ID = "PT-8839-CR"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 PATHS = {
-    "patient":      os.path.join(BASE_DIR, "patient.json"),
-    "nephrology":   os.path.join(BASE_DIR, "nephrology.json"),
-    "cardiology":   os.path.join(BASE_DIR, "cardiology.json"),
-    "hypertension": os.path.join(BASE_DIR, "hypertension.json"),
+    "patient":      os.path.join(BASE_DIR, "patient_triples.json"),
+    "nephrology":   os.path.join(BASE_DIR, "nephrology_triples.json"),
+    "cardiology":   os.path.join(BASE_DIR, "cardiology_triples.json"),
+    "hypertension": os.path.join(BASE_DIR, "hypertension_triples.json"),
 }
 
 DB_PATH = os.environ.get(

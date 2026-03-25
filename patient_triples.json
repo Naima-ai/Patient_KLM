@@ -110,9 +110,6 @@
     "source": "DNA"
   },
 
-  // =========================
-  // POLYGENIC RISK
-  // =========================
   {
     "head": "PT-8839-CR",
     "relation": "has_polygenic_risk",
@@ -130,9 +127,7 @@
     "source": "DNA"
   },
 
-  // =========================
-  // EHR FEB 2025
-  // =========================
+
   {
     "head": "PT-8839-CR",
     "relation": "has_diagnosis",
@@ -175,9 +170,7 @@
     "timestamp": "2025-02-14"
   },
 
-  // =========================
-  // EHR OCT 2025 (PROGRESSION)
-  // =========================
+
   {
     "head": "PT-8839-CR",
     "relation": "has_diagnosis",

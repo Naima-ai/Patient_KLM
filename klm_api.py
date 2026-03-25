@@ -44,26 +44,32 @@ class PatientKLM:
     def _rows_to_triples(self, rows) -> list[dict]:
         return [dict(row) for row in rows]
 
-    def get_by_patient(
-        self,
-        patient_id: str,
-        relation: Optional[str] = None,
-        min_confidence: float = 0.0
-    ) -> list[dict]:
-        """Retrieve all triples for a patient, optionally filtered."""
+    def get_by_patient(self, patient_id, relation=None, min_confidence=0.0):
         conn = self._get_conn()
-        if relation:
-            rows = conn.execute("""
-                SELECT * FROM triples
-                WHERE head = ? AND relation = ? AND confidence >= ?
-                ORDER BY timestamp
-            """, (patient_id, relation, min_confidence)).fetchall()
-        else:
-            rows = conn.execute("""
-                SELECT * FROM triples
-                WHERE head = ? AND confidence >= ?
-                ORDER BY timestamp
-            """, (patient_id, min_confidence)).fetchall()
+        
+        # First get all tails from patient's genetic variant triples
+        linked_heads = conn.execute("""
+            SELECT DISTINCT substr(tail, 1, instr(tail||':', ':') - 1)
+            FROM triples
+            WHERE head = ? AND relation = 'carries_genetic_variant'
+        """, (patient_id,)).fetchall()
+        linked = [row[0] for row in linked_heads]
+    
+        # Build query to include patient + linked entity triples
+        placeholders = ",".join("?" * len(linked))
+        query = f"""
+            SELECT * FROM triples
+            WHERE (head = ? OR head IN ({placeholders}))
+            AND confidence >= ?
+            ORDER BY timestamp
+        """ if linked else """
+            SELECT * FROM triples
+            WHERE head = ? AND confidence >= ?
+            ORDER BY timestamp
+        """
+        
+        params = [patient_id] + linked + [min_confidence] if linked else [patient_id, min_confidence]
+        rows = conn.execute(query, params).fetchall()
         return self._rows_to_triples(rows)
 
     def get_disease_timeline(self, patient_id: str) -> list[dict]:

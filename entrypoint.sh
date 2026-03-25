@@ -1,19 +1,36 @@
-#!/bin/bash
-# entrypoint.sh
-# Runs on every container start:
-# 1. Seeds PT-8839-CR data into the DB
-# 2. Starts the KLM endpoint server
+# Dockerfile.patient
+FROM python:3.11-slim
 
-set -e
+WORKDIR /app
 
-echo "=== Patient KLM Startup ==="
-echo "Database: $PATIENT_KLM_DB_PATH"
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Seed Demo #2 patient (safe to run every time — uses INSERT OR REPLACE)
-echo ""
-echo "Seeding PT-8839-CR data..."
-python seed_demo2.py
+# Core KLM files
+COPY klm_api.py .
+COPY patient_klm_endpoint.py .
+COPY entrypoint.sh .
 
-echo ""
-echo "Starting endpoint server..."
-python patient_klm_endpoint.py
+# Demo 2 seed
+COPY seed_demo2.py .
+COPY demo_2/ demo_2/
+
+# Demo 3 seed + pipeline
+COPY demo_3/ demo_3/
+
+# Base database (P-001 data built by run_pipeline.py)
+COPY data/patient_klm.db data/patient_klm.db
+
+# Demo 3 pre-generated JSON files (run run_pipeline_p003.py locally first)
+COPY data/p003_ehr_records.json data/p003_ehr_records.json
+COPY data/p003_genomic_profile.json data/p003_genomic_profile.json
+COPY data/p003_patient_triples.json data/p003_patient_triples.json
+COPY data/p003_pathology_triples.json data/p003_pathology_triples.json
+
+RUN chmod +x entrypoint.sh
+
+EXPOSE 8001
+
+ENV PATIENT_KLM_DB_PATH=/app/data/patient_klm.db
+
+CMD ["./entrypoint.sh"]

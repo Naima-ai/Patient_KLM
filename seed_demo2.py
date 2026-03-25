@@ -28,12 +28,13 @@ PATIENT_ID = "PT-8839-CR"
 
 # Edit these paths if your JSON files live elsewhere
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DEMO2_DIR = os.path.join(BASE_DIR, "demo_2") 
 
 PATHS = {
-    "patient":      os.path.join(BASE_DIR, "patient_triples.json"),
-    "nephrology":   os.path.join(BASE_DIR, "nephrology_triples.json"),
-    "cardiology":   os.path.join(BASE_DIR, "cardiology_triples.json"),
-    "hypertension": os.path.join(BASE_DIR, "hypertension_triples.json"),
+    "patient":      os.path.join(DEMO2_DIR, "patient_triples.json"),
+    "nephrology":   os.path.join(DEMO2_DIR, "nephrology_triples.json"),
+    "cardiology":   os.path.join(DEMO2_DIR, "cardiology_triples.json"),
+    "hypertension": os.path.join(DEMO2_DIR, "hypertension_triples.json"),
 }
 
 DB_PATH = os.environ.get(

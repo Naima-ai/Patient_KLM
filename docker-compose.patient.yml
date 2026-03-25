@@ -11,7 +11,6 @@ services:
     environment:
       - PATIENT_KLM_DB_PATH=/app/data/patient_klm.db
     volumes:
-      # Mount data folder so real-time ingested triples persist
-      # even if the container is restarted
+      # Mount data folder so the seeded DB persists across restarts
       - ./data:/app/data
     restart: unless-stopped

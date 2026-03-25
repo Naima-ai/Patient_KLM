@@ -1,4 +1,6 @@
-To run: docker compose -f docker-compose.patient.yml up --build
+To run: 
+pyhton seed_demo2.py
+docker compose -f docker-compose.patient.yml up --build
 
 
 The Patient KLM is a knowledge store for individual patient data. It stores patient EHR records and DNA/genomic profiles as

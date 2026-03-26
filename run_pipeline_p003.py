@@ -29,10 +29,10 @@ sys.path.insert(0, DEMO3_DIR)
 
 def check_env():
     if not os.environ.get("ANTHROPIC_API_KEY"):
-        print("❌ ANTHROPIC_API_KEY not set.")
+        print("ANTHROPIC_API_KEY not set.")
         print("   export ANTHROPIC_API_KEY=sk-ant-...")
         sys.exit(1)
-    print("✅ API key found")
+    print("API key found")
 
 
 def run_step(name, filepath):
@@ -73,7 +73,7 @@ if __name__ == "__main__":
     )
 
     print(f"\n{'='*60}")
-    print("✅ P-003 Pipeline Complete!")
+    print("P-003 Pipeline Complete!")
     print(f"{'='*60}")
     print("\nGenerated files:")
     for f in sorted(os.listdir(os.path.join(BASE_DIR, "data"))):

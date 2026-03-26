@@ -1,0 +1,115 @@
+{
+  "patient_id": "P-003",
+  "profiling_date": "2023-02-14",
+  "platform": "clinical_exome_panel",
+  "genetic_variants": [
+    {
+      "gene": "ACE",
+      "variant_id": "rs4646994",
+      "zygosity": "homozygous",
+      "clinical_significance": "risk_factor",
+      "associated_condition": "hypertension, CKD progression",
+      "effect": "D allele homozygous \u2014 higher ACE activity, associated with faster CKD progression and LVH",
+      "evidence_level": "II"
+    },
+    {
+      "gene": "AGT",
+      "variant_id": "rs699",
+      "zygosity": "heterozygous",
+      "clinical_significance": "likely_pathogenic",
+      "associated_condition": "essential hypertension",
+      "effect": "M235T variant \u2014 increased angiotensinogen levels, elevated BP risk",
+      "evidence_level": "II"
+    },
+    {
+      "gene": "SCN5A",
+      "variant_id": "rs1805124",
+      "zygosity": "heterozygous",
+      "clinical_significance": "VUS",
+      "associated_condition": "atrial fibrillation predisposition",
+      "effect": "Sodium channel variant, borderline reduced conduction velocity",
+      "evidence_level": "III"
+    },
+    {
+      "gene": "APOL1",
+      "variant_id": "rs73885319",
+      "zygosity": "heterozygous",
+      "clinical_significance": "risk_factor",
+      "associated_condition": "CKD, focal segmental glomerulosclerosis",
+      "effect": "G1 variant carrier \u2014 moderate increased CKD risk",
+      "evidence_level": "II"
+    },
+    {
+      "gene": "CYP2C9",
+      "variant_id": "rs1799853",
+      "zygosity": "heterozygous",
+      "clinical_significance": "pharmacogenomic",
+      "associated_condition": "anticoagulant metabolism",
+      "effect": "*2 allele \u2014 intermediate metaboliser, dose adjustment needed for warfarin",
+      "evidence_level": "I"
+    },
+    {
+      "gene": "NPHS2",
+      "variant_id": "rs121909342",
+      "zygosity": "heterozygous",
+      "clinical_significance": "VUS",
+      "associated_condition": "proteinuria, podocyte dysfunction",
+      "effect": "Podocin variant contributing to persistent proteinuria",
+      "evidence_level": "III"
+    }
+  ],
+  "polygenic_risk_scores": {
+    "hypertension_prs": {
+      "score": 2.34,
+      "percentile": 87,
+      "interpretation": "High genetic predisposition to hypertension. Score indicates 2.1x increased risk compared to population median."
+    },
+    "ckd_progression_prs": {
+      "score": 1.89,
+      "percentile": 78,
+      "interpretation": "Elevated genetic risk for CKD progression. Combined with APOL1 and ACE variants, supports aggressive nephroprotective strategies."
+    },
+    "atrial_fibrillation_prs": {
+      "score": 1.67,
+      "percentile": 73,
+      "interpretation": "Above-average genetic susceptibility to atrial fibrillation, particularly in setting of structural heart disease."
+    }
+  },
+  "pharmacogenomics": {
+    "ACE_inhibitor_response": "Good response expected to ACE inhibitors. D/D genotype may benefit from higher therapeutic doses for optimal cardioprotection.",
+    "anticoagulant_metabolism": "CYP2C9*1/*2 genotype indicates intermediate warfarin metabolism. Initial dosing should be reduced by 10-25% with frequent INR monitoring.",
+    "statin_metabolism": "Standard statin metabolism expected. No dose adjustments required for atorvastatin or rosuvastatin.",
+    "diuretic_response": "Standard response to thiazide and loop diuretics. Monitor for electrolyte imbalances given CKD stage 4."
+  },
+  "dna_fragments": [
+    {
+      "fragment_id": "FRAG-P003-001",
+      "gene_region": "ACE intron 16",
+      "sequence_excerpt": "CTGGAGACCACTCCCATCCTTTCT",
+      "length_bp": 287,
+      "mutation_sites": [
+        "rs4646994 deletion polymorphism at position 144"
+      ]
+    },
+    {
+      "fragment_id": "FRAG-P003-002",
+      "gene_region": "AGT exon 2",
+      "sequence_excerpt": "ATGCAGCGCATCCTGGTCATC",
+      "length_bp": 198,
+      "mutation_sites": [
+        "rs699 C>T at position 89"
+      ]
+    },
+    {
+      "fragment_id": "FRAG-P003-003",
+      "gene_region": "SCN5A exon 28",
+      "sequence_excerpt": "GAGCTGGTGGCCTTTGTGAAC",
+      "length_bp": 312,
+      "mutation_sites": [
+        "heterozygous missense at position 156"
+      ]
+    }
+  ],
+  "family_history_genetic_notes": "Father with CAD and hypertension. Paternal uncle with CKD. Pattern consistent with polygenic cardiovascular-renal risk inheritance.",
+  "clinical_summary": "58-year-old South Asian male with advanced CKD stage 4, hypertension, atrial fibrillation, and cardiorenal syndrome. Genetic profile reveals multiple risk variants in the renin-angiotensin system (ACE D/D, AGT M235T) and moderate APOL1 G1 carrier status contributing to nephropathy progression. High polygenic risk scores for hypertension (87th percentile) and CKD progression (78th percentile) support genetic predisposition. CYP2C9*2 carrier status requires warfarin dose adjustment for anticoagulation management. Genetic findings support aggressive BP control, nephroprotective therapy, and personalized pharmacotherapy approach."
+}

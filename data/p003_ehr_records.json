@@ -1,0 +1,398 @@
+{
+  "patient": {
+    "patient_id": "P-003",
+    "name": "demo-user-3",
+    "dob": "1965-08-22",
+    "sex": "Male",
+    "ethnicity": "South Asian",
+    "blood_type": "B+",
+    "baseline_conditions": [
+      "obesity (BMI 31)",
+      "type 2 diabetes (diet-controlled)",
+      "family history of hypertension and coronary artery disease (father)"
+    ]
+  },
+  "ehr_visits": [
+    {
+      "visit_id": "V-20230214",
+      "patient_id": "P-003",
+      "visit_date": "2023-02-14",
+      "visit_type": "outpatient nephrology-cardiology",
+      "chief_complaint": "Elevated blood pressure readings at home, mild swelling in ankles",
+      "vitals": {
+        "blood_pressure": "155/95",
+        "heart_rate": 78,
+        "temperature_celsius": 36.8,
+        "weight_kg": 92.5,
+        "bmi": 31.2
+      },
+      "symptoms": [
+        "mild ankle swelling",
+        "occasional fatigue",
+        "no chest pain",
+        "no shortness of breath"
+      ],
+      "physical_exam_findings": [
+        "mild bilateral ankle edema",
+        "regular heart rhythm",
+        "no jugular venous distension",
+        "clear lung fields",
+        "no abdominal bruits"
+      ],
+      "lab_results": {
+        "creatinine_mg_dl": 1.35,
+        "egfr_ml_min": 70,
+        "bun_mg_dl": 24,
+        "potassium_meq_l": 4.2,
+        "sodium_meq_l": 140,
+        "hemoglobin_g_dl": 13.8,
+        "bnp_pg_ml": 85,
+        "hba1c_percent": 6.1,
+        "urinalysis": {
+          "protein": "trace",
+          "blood": "negative",
+          "albumin_creatinine_ratio": "45 mg/g",
+          "specific_gravity": "1.018"
+        }
+      },
+      "imaging": {
+        "type": "ECG",
+        "findings": "Mild left ventricular hypertrophy with increased R wave amplitude in V5-V6, normal sinus rhythm"
+      },
+      "diagnosis_codes": [
+        "ICD-10: I10 - Essential hypertension",
+        "ICD-10: N18.2 - Chronic kidney disease, stage 2",
+        "ICD-10: E11.22 - Type 2 diabetes with diabetic chronic kidney disease",
+        "ICD-10: E66.9 - Obesity, unspecified"
+      ],
+      "medications": [
+        "Lisinopril 10mg daily",
+        "Metformin 500mg twice daily (continued)"
+      ],
+      "clinical_notes": "57-year-old South Asian male with newly diagnosed hypertension and early chronic kidney disease. Family history significant for CAD and hypertension. Current BP 155/95 with evidence of target organ damage including mild LVH on ECG and reduced eGFR with microalbuminuria. Diet-controlled diabetes with borderline glycemic control. Initiated ACE inhibitor therapy and dietary counseling provided.",
+      "follow_up_plan": "Return in 4 weeks to assess BP response to ACE inhibitor. Dietitian consultation for low-sodium DASH diet and diabetes management. Home BP monitoring initiated. Repeat basic metabolic panel and urinalysis in 2 weeks to monitor for hyperkalemia. Consider echocardiogram if BP not controlled at next visit.",
+      "clinical_stage": "hypertension_early_ckd"
+    },
+    {
+      "visit_id": "V-20230830",
+      "patient_id": "P-003",
+      "visit_date": "2023-08-30",
+      "visit_type": "outpatient nephrology-cardiology",
+      "chief_complaint": "Elevated blood pressure readings at home, mild leg swelling",
+      "vitals": {
+        "blood_pressure": "155/95",
+        "heart_rate": 78,
+        "temperature_celsius": 36.8,
+        "weight_kg": 92.5,
+        "bmi": 31.2
+      },
+      "symptoms": [
+        "mild ankle edema",
+        "occasional fatigue",
+        "no chest pain",
+        "no dyspnea"
+      ],
+      "physical_exam_findings": [
+        "mild bilateral ankle edema",
+        "no JVD",
+        "regular heart rate and rhythm",
+        "S4 gallop present",
+        "mild peripheral edema 1+",
+        "no rales on lung exam"
+      ],
+      "lab_results": {
+        "creatinine_mg_dl": 1.35,
+        "egfr_ml_min": 70,
+        "bun_mg_dl": 24,
+        "potassium_meq_l": 4.2,
+        "sodium_meq_l": 140,
+        "hemoglobin_g_dl": 13.8,
+        "bnp_pg_ml": 145,
+        "hba1c_percent": 6.3,
+        "urinalysis": {
+          "protein": "trace",
+          "blood": "negative",
+          "albumin_creatinine_ratio": "45 mg/g",
+          "specific_gravity": "1.018"
+        }
+      },
+      "imaging": {
+        "type": "ECG",
+        "findings": "Mild left ventricular hypertrophy with repolarization abnormalities, normal sinus rhythm"
+      },
+      "diagnosis_codes": [
+        "ICD-10: I10 Essential hypertension",
+        "ICD-10: N18.2 Chronic kidney disease, stage 2",
+        "ICD-10: E11.9 Type 2 diabetes mellitus without complications",
+        "ICD-10: E66.9 Obesity, unspecified"
+      ],
+      "medications": [
+        "Lisinopril 10mg daily",
+        "Metformin 500mg twice daily (continue current)"
+      ],
+      "clinical_notes": "58-year-old South Asian male with obesity, diet-controlled T2DM, and family history of HTN/CAD presents with newly diagnosed hypertension and early signs of CKD stage 2. Blood pressure elevated at 155/95 with mild LVH on ECG. Laboratory studies reveal mild elevation in creatinine (1.35) with eGFR of 70 and microalbuminuria (ACR 45). HbA1c borderline at 6.3% suggesting suboptimal glucose control. Physical exam notable for mild bilateral ankle edema and S4 gallop consistent with early diastolic dysfunction.",
+      "follow_up_plan": "Start Lisinopril 10mg daily, low sodium diet counseling (<2g/day), diabetes education referral, repeat labs in 4 weeks to monitor creatinine and electrolytes, ophthalmology referral for diabetic eye exam, return visit in 6 weeks, home BP monitoring recommended",
+      "clinical_stage": "hypertension_early_ckd"
+    },
+    {
+      "visit_id": "V-20240305",
+      "patient_id": "P-003",
+      "visit_date": "2024-03-05",
+      "visit_type": "outpatient nephrology-cardiology",
+      "chief_complaint": "Follow-up for chronic kidney disease and hypertension management",
+      "vitals": {
+        "blood_pressure": "158/94",
+        "heart_rate": 78,
+        "temperature_celsius": 36.8,
+        "weight_kg": 89.5,
+        "bmi": 31.2
+      },
+      "symptoms": [
+        "mild fatigue",
+        "occasional dyspnea on exertion",
+        "peripheral edema"
+      ],
+      "physical_exam_findings": [
+        "1+ bilateral pedal edema",
+        "S4 gallop present",
+        "mild jugular venous distension",
+        "point of maximal impulse displaced laterally",
+        "no hepatomegaly"
+      ],
+      "lab_results": {
+        "creatinine_mg_dl": 1.9,
+        "egfr_ml_min": 45,
+        "bun_mg_dl": 32,
+        "potassium_meq_l": 5.2,
+        "sodium_meq_l": 138,
+        "hemoglobin_g_dl": 11.2,
+        "bnp_pg_ml": 185,
+        "hba1c_percent": 6.8,
+        "urinalysis": {
+          "protein": "2+",
+          "blood": "trace",
+          "albumin_creatinine_ratio": "385 mg/g",
+          "specific_gravity": "1.018"
+        }
+      },
+      "imaging": {
+        "type": "echocardiogram",
+        "findings": "Left ventricular hypertrophy with preserved ejection fraction (58%). Grade II diastolic dysfunction. Left atrial enlargement. No regional wall motion abnormalities."
+      },
+      "diagnosis_codes": [
+        "ICD-10: N18.32 (Chronic kidney disease, stage 3b)",
+        "ICD-10: I25.10 (Atherosclerotic heart disease)",
+        "ICD-10: I11.9 (Hypertensive heart disease)",
+        "ICD-10: E11.22 (Type 2 diabetes with diabetic chronic kidney disease)",
+        "ICD-10: D63.1 (Anemia in chronic kidney disease)"
+      ],
+      "medications": [
+        "Lisinopril 20mg daily",
+        "Amlodipine 5mg daily - newly added",
+        "Metformin 500mg twice daily",
+        "Aspirin 81mg daily",
+        "Atorvastatin 40mg daily"
+      ],
+      "clinical_notes": "58-year-old South Asian male with progression of CKD to stage 3b. eGFR declined from previous 52 to 45 mL/min/1.73m\u00b2. Persistent proteinuria with ACR 385 mg/g indicates ongoing kidney damage. Echocardiogram confirms development of left ventricular hypertrophy and diastolic dysfunction consistent with hypertensive heart disease. Blood pressure remains poorly controlled on current ACE inhibitor therapy. Hyperkalemia noted at 5.2 mEq/L, likely related to ACE inhibitor use and declining kidney function. Early anemia of CKD developing with Hgb 11.2 g/dL. Diabetes remains well-controlled with diet.",
+      "follow_up_plan": "Added Amlodipine 5mg daily for BP control. Monitor potassium levels in 1 week given hyperkalemia. Nephrology referral initiated for CKD management. Consider iron studies and EPO evaluation for anemia workup. Dietary counseling for low potassium diet. Renal function monitoring in 6-8 weeks. Cardiology follow-up in 3 months for heart failure risk stratification.",
+      "clinical_stage": "ckd_stage3_lvh"
+    },
+    {
+      "visit_id": "V-20241017",
+      "patient_id": "P-003",
+      "visit_date": "2024-10-17",
+      "visit_type": "outpatient nephrology-cardiology",
+      "chief_complaint": "Follow-up for chronic kidney disease and poorly controlled hypertension with new concern for cardiac complications",
+      "vitals": {
+        "blood_pressure": "158/94 mmHg",
+        "heart_rate": 78,
+        "temperature_celsius": 36.8,
+        "weight_kg": 89.2,
+        "bmi": 31.2
+      },
+      "symptoms": [
+        "mild fatigue",
+        "occasional shortness of breath on exertion",
+        "lower extremity edema"
+      ],
+      "physical_exam_findings": [
+        "mild bilateral lower extremity edema",
+        "S4 gallop present",
+        "elevated JVP at 8 cm",
+        "no murmurs or rubs",
+        "fundoscopic exam shows mild arteriovenous nicking"
+      ],
+      "lab_results": {
+        "creatinine_mg_dl": 1.9,
+        "egfr_ml_min": 45,
+        "bun_mg_dl": 28,
+        "potassium_meq_l": 5.2,
+        "sodium_meq_l": 139,
+        "hemoglobin_g_dl": 11.2,
+        "bnp_pg_ml": 185,
+        "hba1c_percent": 6.8,
+        "urinalysis": {
+          "protein": "2+ (approximately 400 mg/day)",
+          "blood": "trace",
+          "albumin_creatinine_ratio": "285 mg/g",
+          "specific_gravity": "1.018"
+        }
+      },
+      "imaging": {
+        "type": "echocardiogram",
+        "findings": "Left ventricular hypertrophy with preserved ejection fraction (55%). Grade II diastolic dysfunction. Mild left atrial enlargement. No wall motion abnormalities."
+      },
+      "diagnosis_codes": [
+        "ICD-10: N18.32 (Chronic kidney disease, stage 3b)",
+        "ICD-10: I25.10 (Atherosclerotic heart disease)",
+        "ICD-10: I11.9 (Hypertensive heart disease)",
+        "ICD-10: D63.1 (Anemia in chronic kidney disease)",
+        "ICD-10: E87.5 (Hyperkalemia)"
+      ],
+      "medications": [
+        "Lisinopril 20mg daily",
+        "Amlodipine 5mg daily (newly added)",
+        "Metformin 1000mg twice daily",
+        "Atorvastatin 40mg daily",
+        "Aspirin 81mg daily"
+      ],
+      "clinical_notes": "58-year-old South Asian male with obesity, type 2 diabetes, and family history of cardiovascular disease presenting with progression to CKD stage 3b. eGFR has declined to 45 mL/min with persistent proteinuria. Echocardiogram confirms left ventricular hypertrophy and diastolic dysfunction consistent with hypertensive heart disease. Blood pressure remains poorly controlled despite ACE inhibitor therapy. Development of anemia of chronic kidney disease with hemoglobin 11.2 g/dL. Hyperkalemia noted at 5.2 mEq/L requires monitoring. Added amlodipine for improved BP control. Patient counseled on dietary potassium restriction and CKD progression.",
+      "follow_up_plan": "Nephrology referral initiated for CKD management. Recheck labs in 2 weeks including basic metabolic panel and CBC. Blood pressure monitoring at home. Dietary consultation for CKD and potassium restriction. Consider iron studies and erythropoiesis-stimulating agents if anemia progresses. Follow-up in cardiology clinic in 6 weeks. Patient education on CKD progression and cardiovascular risk reduction provided.",
+      "clinical_stage": "ckd_stage3_lvh"
+    },
+    {
+      "visit_id": "V-20250120",
+      "patient_id": "P-003",
+      "visit_date": "2025-01-20",
+      "visit_type": "outpatient nephrology-cardiology",
+      "chief_complaint": "Worsening fatigue, shortness of breath, and bilateral lower extremity swelling over the past 2 weeks. Palpitations noted intermittently.",
+      "vitals": {
+        "blood_pressure": "168/100",
+        "heart_rate": 92,
+        "temperature_celsius": 36.8,
+        "weight_kg": 89.2,
+        "bmi": 31.0
+      },
+      "symptoms": [
+        "fatigue",
+        "dyspnea on exertion",
+        "bilateral lower extremity edema",
+        "intermittent palpitations",
+        "decreased exercise tolerance",
+        "mild orthopnea"
+      ],
+      "physical_exam_findings": [
+        "irregularly irregular heart rhythm",
+        "bilateral pitting edema 2+ to mid-shins",
+        "jugular venous distension to 8cm",
+        "bibasilar fine crackles",
+        "S3 gallop present",
+        "pallor noted"
+      ],
+      "lab_results": {
+        "creatinine_mg_dl": 3.0,
+        "egfr_ml_min": 25,
+        "bun_mg_dl": 58,
+        "potassium_meq_l": 4.8,
+        "sodium_meq_l": 138,
+        "hemoglobin_g_dl": 9.8,
+        "bnp_pg_ml": 1850,
+        "hba1c_percent": 7.2,
+        "urinalysis": {
+          "protein": "2+",
+          "blood": "trace",
+          "albumin_creatinine_ratio": "285 mg/g",
+          "specific_gravity": "1.018"
+        }
+      },
+      "imaging": {
+        "type": "echocardiogram",
+        "findings": "Left ventricular ejection fraction 45%, mild left atrial enlargement, grade II diastolic dysfunction, no significant valvular disease. ECG shows atrial fibrillation with controlled ventricular response, rate 88-95 bpm."
+      },
+      "diagnosis_codes": [
+        "ICD-10: N18.4 (Chronic kidney disease, stage 4)",
+        "ICD-10: I48.91 (Unspecified atrial fibrillation)",
+        "ICD-10: I13.2 (Hypertensive heart and chronic kidney disease with heart failure and stage 1-4 CKD)",
+        "ICD-10: N18.6 (End stage renal disease)",
+        "ICD-10: D63.1 (Anemia in chronic kidney disease)"
+      ],
+      "medications": [
+        "Apixaban 2.5mg twice daily (renal dosing)",
+        "Lisinopril 10mg daily",
+        "Amlodipine 10mg daily",
+        "Metoprolol succinate 50mg daily",
+        "Furosemide 40mg twice daily",
+        "Atorvastatin 20mg daily",
+        "Metformin 500mg daily"
+      ],
+      "clinical_notes": "58-year-old South Asian male with CKD stage 4 (eGFR 25, Cr 3.0) presenting with new-onset atrial fibrillation confirmed on Holter monitoring and evidence of cardiorenal syndrome type 4. Significant fluid overload with elevated BNP. Anemia of CKD with Hgb 9.8. Hypertension poorly controlled on triple therapy. Diabetes remains diet-controlled with acceptable HbA1c. CHA2DS2-VASc score 4, warranting anticoagulation with renally-dosed apixaban. Patient counseled on progression to ESRD and need for renal replacement therapy planning.",
+      "follow_up_plan": "1. Vascular surgery consult for arteriovenous fistula creation within 2 weeks. 2. Cardiology follow-up in 1 week for atrial fibrillation management and rate control optimization. 3. Nephrology follow-up in 2 weeks. 4. Initiate erythropoiesis-stimulating agent (epoetin alfa) for anemia management. 5. Dietitian consultation for CKD and heart failure diet. 6. Pre-dialysis education class scheduled. 7. Repeat labs in 1 week including CBC, CMP, PT/INR. 8. Consider uptitration of diuretics if no improvement in fluid status.",
+      "clinical_stage": "ckd_stage4_afib_cardiorenal"
+    },
+    {
+      "visit_id": "V-20250708",
+      "patient_id": "P-003",
+      "visit_date": "2025-07-08",
+      "visit_type": "outpatient nephrology-cardiology",
+      "chief_complaint": "Follow-up for worsening kidney function, newly diagnosed atrial fibrillation, and fluid retention",
+      "vitals": {
+        "blood_pressure": "168/100",
+        "heart_rate": 92,
+        "temperature_celsius": 36.7,
+        "weight_kg": 89.2,
+        "bmi": 31.2
+      },
+      "symptoms": [
+        "shortness of breath on exertion",
+        "lower extremity swelling",
+        "fatigue",
+        "palpitations"
+      ],
+      "physical_exam_findings": [
+        "irregularly irregular rhythm",
+        "bilateral lower extremity edema 2+",
+        "JVD elevated to 12 cm",
+        "bibasilar crackles",
+        "S3 gallop present"
+      ],
+      "lab_results": {
+        "creatinine_mg_dl": 3.0,
+        "egfr_ml_min": 24,
+        "bun_mg_dl": 68,
+        "potassium_meq_l": 4.8,
+        "sodium_meq_l": 136,
+        "hemoglobin_g_dl": 9.8,
+        "bnp_pg_ml": 1850,
+        "hba1c_percent": 6.8,
+        "urinalysis": {
+          "protein": "3+ proteinuria",
+          "blood": "1+",
+          "albumin_creatinine_ratio": "420 mg/g",
+          "specific_gravity": "1.018"
+        }
+      },
+      "imaging": {
+        "type": "echocardiogram",
+        "findings": "LVEF 45%, moderate left atrial enlargement, grade 2 diastolic dysfunction, mild mitral regurgitation"
+      },
+      "diagnosis_codes": [
+        "ICD-10: N18.4 - Chronic kidney disease, stage 4",
+        "ICD-10: I48.91 - Unspecified atrial fibrillation",
+        "ICD-10: N25.9 - Cardiorenal syndrome",
+        "ICD-10: I50.9 - Heart failure, unspecified",
+        "ICD-10: E11.22 - Type 2 diabetes with diabetic chronic kidney disease"
+      ],
+      "medications": [
+        "Apixaban 2.5mg BID (renal dosing)",
+        "Lisinopril 40mg daily",
+        "Metoprolol succinate 100mg daily",
+        "Furosemide 80mg BID",
+        "Calcium carbonate 1000mg TID with meals",
+        "Calcitriol 0.25mcg daily"
+      ],
+      "clinical_notes": "58-year-old South Asian male with obesity, T2DM presenting with progression to CKD stage 4 and new onset atrial fibrillation. Holter monitor confirmed persistent AF. Evidence of cardiorenal syndrome type 4 with reduced LVEF and fluid overload. Hypertension poorly controlled despite triple therapy. Anemia of CKD present with Hgb 9.8. Patient counseled on need for dialysis access planning and ESA therapy consideration.",
+      "follow_up_plan": "1. Vascular surgery referral for AV fistula creation within 2 weeks 2. Initiate erythropoiesis-stimulating agent therapy 3. Cardiology follow-up in 2 weeks for AF management optimization 4. Nephrology follow-up in 4 weeks 5. Dietitian referral for CKD/cardiac diet 6. Home daily weights, call if >3lb gain in 2 days 7. Pre-dialysis education classes scheduled",
+      "clinical_stage": "ckd_stage4_afib_cardiorenal"
+    }
+  ]
+}

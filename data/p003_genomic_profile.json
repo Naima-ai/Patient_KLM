@@ -50,7 +50,7 @@
     },
     {
       "gene": "NPHS2",
-      "variant_id": "rs121909342",
+      "variant_id": "rs3829795",
       "zygosity": "heterozygous",
       "clinical_significance": "VUS",
       "associated_condition": "proteinuria, podocyte dysfunction",
@@ -61,25 +61,25 @@
   "polygenic_risk_scores": {
     "hypertension_prs": {
       "score": 2.34,
-      "percentile": 87,
-      "interpretation": "High genetic predisposition to hypertension. Score indicates 2.1x increased risk compared to population median."
+      "percentile": 88,
+      "interpretation": "High genetic risk for essential hypertension. Score indicates 2.8-fold increased risk compared to population median."
     },
     "ckd_progression_prs": {
       "score": 1.89,
-      "percentile": 78,
-      "interpretation": "Elevated genetic risk for CKD progression. Combined with APOL1 and ACE variants, supports aggressive nephroprotective strategies."
+      "percentile": 79,
+      "interpretation": "Elevated genetic risk for CKD progression. Consistent with advanced stage 4 CKD presentation."
     },
     "atrial_fibrillation_prs": {
       "score": 1.67,
       "percentile": 73,
-      "interpretation": "Above-average genetic susceptibility to atrial fibrillation, particularly in setting of structural heart disease."
+      "interpretation": "Moderately elevated genetic susceptibility to atrial fibrillation, particularly in context of structural heart disease."
     }
   },
   "pharmacogenomics": {
-    "ACE_inhibitor_response": "Good response expected to ACE inhibitors. D/D genotype may benefit from higher therapeutic doses for optimal cardioprotection.",
-    "anticoagulant_metabolism": "CYP2C9*1/*2 genotype indicates intermediate warfarin metabolism. Initial dosing should be reduced by 10-25% with frequent INR monitoring.",
-    "statin_metabolism": "Standard statin metabolism expected. No dose adjustments required for atorvastatin or rosuvastatin.",
-    "diuretic_response": "Standard response to thiazide and loop diuretics. Monitor for electrolyte imbalances given CKD stage 4."
+    "ACE_inhibitor_response": "Normal response expected. ACE DD genotype may require higher doses for optimal BP control.",
+    "anticoagulant_metabolism": "CYP2C9*2 carrier - reduce initial warfarin dose by 25-30%. Monitor INR closely during initiation.",
+    "statin_metabolism": "Normal metabolism expected. Standard dosing appropriate.",
+    "diuretic_response": "Good response to thiazide-type diuretics predicted based on genetic profile."
   },
   "dna_fragments": [
     {
@@ -111,5 +111,5 @@
     }
   ],
   "family_history_genetic_notes": "Father with CAD and hypertension. Paternal uncle with CKD. Pattern consistent with polygenic cardiovascular-renal risk inheritance.",
-  "clinical_summary": "58-year-old South Asian male with advanced CKD stage 4, hypertension, atrial fibrillation, and cardiorenal syndrome. Genetic profile reveals multiple risk variants in the renin-angiotensin system (ACE D/D, AGT M235T) and moderate APOL1 G1 carrier status contributing to nephropathy progression. High polygenic risk scores for hypertension (87th percentile) and CKD progression (78th percentile) support genetic predisposition. CYP2C9*2 carrier status requires warfarin dose adjustment for anticoagulation management. Genetic findings support aggressive BP control, nephroprotective therapy, and personalized pharmacotherapy approach."
+  "clinical_summary": "58-year-old South Asian male with advanced CKD stage 4, hypertension, and atrial fibrillation showing genetic predisposition through multiple cardiovascular-renal risk variants. ACE DD genotype and AGT M235T variant contribute to hypertension severity. APOL1 G1 carrier status partially explains CKD progression. SCN5A variant provides genetic context for atrial fibrillation. CYP2C9*2 carrier status requires warfarin dose adjustment. High polygenic risk scores support aggressive cardiovascular risk management and close monitoring of CKD progression."
 }

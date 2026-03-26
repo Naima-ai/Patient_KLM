@@ -1,4 +1,7 @@
 """
+patient_klm_endpoint.py
+Simple REST API for the Patient KLM.
+
 Endpoints:
   GET  /patient/{patient_id}           — all patient triples as JSON (for prompt injection)
   GET  /patient/{patient_id}/timeline  — disease progression timeline
@@ -6,10 +9,12 @@ Endpoints:
   POST /patient                        — add a new patient with full profile
   POST /patient/{patient_id}/visit     — add a new EHR visit for existing patient
   POST /triple                         — add any custom triple directly
+
 Run:
   pip install fastapi uvicorn
   python patient_klm_endpoint.py
 
+Docs: http://localhost:8001/docs
 """
 
 from fastapi import FastAPI, HTTPException
@@ -25,6 +30,8 @@ from datetime import datetime
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from klm_api import PatientKLM
+
+# ── App ───────────────────────────────────────────────────────────────────────
 
 app = FastAPI(
     title="Patient KLM API",
@@ -68,6 +75,8 @@ def store_triples(triples: list):
     finally:
         conn.close()
 
+
+# ── Input models ──────────────────────────────────────────────────────────────
 
 class NewPatient(BaseModel):
     """
@@ -120,6 +129,7 @@ class CustomTriple(BaseModel):
     klm_source: str = "patient_klm"
 
 
+# ── Helper ────────────────────────────────────────────────────────────────────
 
 def visit_to_triples(pid, visit_date, symptoms, vitals, lab_results,
                      diagnosis_codes, medications, imaging, clinical_notes, source):
@@ -217,6 +227,80 @@ def get_genomics(patient_id: str):
     result = klm.get_genomic_context(patient_id)
     klm.close()
     return {"patient_id": patient_id, "genomics": result}
+
+
+@app.get("/patient/{patient_id}/domain/{domain}")
+def get_by_domain(patient_id: str, domain: str):
+    """
+    Search all triples for a patient filtered by clinical domain.
+
+    Available domains:
+      pathology      — disease-level knowledge triples (from pathology KLM)
+      cardiology     — cardiology-related triples (klm_source contains 'cardiology')
+      nephrology     — nephrology-related triples
+      hypertension   — hypertension-related triples
+      genomics       — DNA and genetic triples
+      ehr            — EHR visit triples only
+
+    Domains are matched against the klm_source field AND tail/relation content,
+    so you get results even when triples are stored under a combined source.
+
+    Examples:
+        GET /patient/P-003/domain/cardiology
+        GET /patient/P-003/domain/pathology
+        GET /patient/P-003/domain/hypertension
+        GET /patient/P-001/domain/genomics
+    """
+    conn = get_conn()
+
+    domain_lower = domain.lower()
+
+    # Map domain keywords to what we search for in klm_source, relation, and tail
+    DOMAIN_KEYWORDS = {
+        "pathology":    ["pathology_klm", "pathology"],
+        "cardiology":   ["cardiology", "cardiac", "heart", "atrial", "ventricular", "afib"],
+        "nephrology":   ["nephrology", "renal", "kidney", "ckd", "egfr", "creatinine"],
+        "hypertension": ["hypertension", "blood_pressure", "antihypertensive", "bp"],
+        "genomics":     ["genomics", "variant", "dna", "gene"],
+        "ehr":          ["ehr", "visit"],
+    }
+
+    keywords = DOMAIN_KEYWORDS.get(domain_lower)
+    if not keywords:
+        available = ", ".join(DOMAIN_KEYWORDS.keys())
+        raise HTTPException(
+            status_code=400,
+            detail=f"Unknown domain '{domain}'. Available: {available}"
+        )
+
+    # Build a query that checks klm_source, relation, and tail for any keyword
+    like_clauses = " OR ".join(
+        ["klm_source LIKE ?", "relation LIKE ?", "tail LIKE ?"] * len(keywords)
+    )
+    params = []
+    for kw in keywords:
+        params += [f"%{kw}%", f"%{kw}%", f"%{kw}%"]
+
+    query = f"""
+        SELECT * FROM triples
+        WHERE head = ?
+          AND ({like_clauses})
+        ORDER BY timestamp
+    """
+
+    rows = conn.execute(query, [patient_id] + params).fetchall()
+    conn.close()
+
+    cols = ["triple_id", "head", "relation", "tail", "confidence",
+            "evidence_level", "source", "timestamp", "klm_source"]
+    triples = [dict(zip(cols, row)) for row in rows]
+
+    return {
+        "patient_id": patient_id,
+        "domain": domain_lower,
+        "total_triples": len(triples),
+        "triples": triples
+    }
 
 
 # ── WRITE endpoints ───────────────────────────────────────────────────────────
@@ -381,4 +465,5 @@ def add_triple(triple: CustomTriple):
 if __name__ == "__main__":
     print("Starting Patient KLM Endpoint...")
     print(f"Database: {DB_PATH}")
+    print(f"Docs:     http://localhost:8001/docs\n")
     uvicorn.run("patient_klm_endpoint:app", host="0.0.0.0", port=8001, reload=False)

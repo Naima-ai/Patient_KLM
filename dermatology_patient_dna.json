@@ -1,0 +1,123 @@
+[
+  {
+    "triple_id": "RT_PT9921_DNA_01",
+    "head": "PT-9921",
+    "relation": "has_attribute",
+    "tail": "name:P-004",
+    "confidence": 0.99,
+    "evidence_level": "I",
+    "source": "DEMOGRAPHICS",
+    "timestamp": "2024-10-10",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_DNA_02",
+    "head": "PT-9921",
+    "relation": "has_attribute",
+    "tail": "genome_build:GRCh38",
+    "confidence": 0.99,
+    "evidence_level": "I",
+    "source": "GENOMICS",
+    "timestamp": "2024-10-10",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_DNA_03",
+    "head": "PT-9921",
+    "relation": "has_attribute",
+    "tail": "sequencing_coverage:30x",
+    "confidence": 0.99,
+    "evidence_level": "I",
+    "source": "GENOMICS",
+    "timestamp": "2024-10-10",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_DNA_04",
+    "head": "PT-9921",
+    "relation": "carries_genetic_variant",
+    "tail": "CDKN2A:rs11515067:High Risk - Melanoma Susceptibility",
+    "confidence": 0.95,
+    "evidence_level": "I",
+    "source": "GENOMICS",
+    "timestamp": "2024-10-10",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_DNA_05",
+    "head": "CDKN2A_variant",
+    "relation": "predisposes_to",
+    "tail": "Melanoma (reduced p16INK4a tumor suppressor function)",
+    "confidence": 0.93,
+    "evidence_level": "I",
+    "source": "GENOMICS",
+    "timestamp": "2024-10-10",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_DNA_06",
+    "head": "PT-9921",
+    "relation": "carries_genetic_variant",
+    "tail": "MC1R:rs1805007:Increased UV sensitivity (Red Hair Color phenotype)",
+    "confidence": 0.99,
+    "evidence_level": "I",
+    "source": "GENOMICS",
+    "timestamp": "2024-10-10",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_DNA_07",
+    "head": "MC1R_variant",
+    "relation": "predisposes_to",
+    "tail": "Solar radiation vulnerability (inefficient eumelanin production, homozygous T/T)",
+    "confidence": 0.97,
+    "evidence_level": "I",
+    "source": "GENOMICS",
+    "timestamp": "2024-10-10",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_DNA_08",
+    "head": "PT-9921",
+    "relation": "carries_genetic_variant",
+    "tail": "FKBP5:rs136175:HPA-Axis Dysregulation Risk",
+    "confidence": 0.88,
+    "evidence_level": "II",
+    "source": "GENOMICS",
+    "timestamp": "2024-10-10",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_DNA_09",
+    "head": "FKBP5_variant",
+    "relation": "predisposes_to",
+    "tail": "Chronic cortisol dysregulation and slower stress recovery (heterozygous T/C)",
+    "confidence": 0.85,
+    "evidence_level": "II",
+    "source": "GENOMICS",
+    "timestamp": "2024-10-10",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_DNA_10",
+    "head": "PT-9921",
+    "relation": "carries_genetic_variant",
+    "tail": "COMT:rs4680:Val158Met Polymorphism",
+    "confidence": 0.88,
+    "evidence_level": "II",
+    "source": "GENOMICS",
+    "timestamp": "2024-10-10",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_DNA_11",
+    "head": "COMT_variant",
+    "relation": "predisposes_to",
+    "tail": "Intermediate dopamine degradation; stress-amplified cognitive arousal (heterozygous G/A)",
+    "confidence": 0.80,
+    "evidence_level": "II",
+    "source": "GENOMICS",
+    "timestamp": "2024-10-10",
+    "klm_source": "patient_klm_dermatology"
+  }
+]

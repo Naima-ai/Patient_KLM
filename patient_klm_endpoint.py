@@ -241,6 +241,7 @@ def get_by_domain(patient_id: str, domain: str):
       hypertension   — hypertension-related triples
       genomics       — DNA and genetic triples
       ehr            — EHR visit triples only
+      dermatology    — skin, nevi, melanoma risk, genomic variants (CDKN2A, MC1R, FKBP5, COMT)
 
     Domains are matched against the klm_source field AND tail/relation content,
     so you get results even when triples are stored under a combined source.
@@ -263,6 +264,9 @@ def get_by_domain(patient_id: str, domain: str):
         "hypertension": ["hypertension", "blood_pressure", "antihypertensive", "bp"],
         "genomics":     ["genomics", "variant", "dna", "gene"],
         "ehr":          ["ehr", "visit"],
+        "dermatology":  ["dermatology", "nevi", "nevus", "melanoma", "lesion", "skin",
+                     "cdkn2a", "mc1r", "fkbp5", "comt", "cortisol", "phq",
+                     "atypical", "biopsy", "uv", "photoprotection"],
     }
 
     keywords = DOMAIN_KEYWORDS.get(domain_lower)

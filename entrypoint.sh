@@ -1,7 +1,4 @@
 #!/bin/bash
-# entrypoint.sh
-# Seeds all demo patients then starts the KLM endpoint server.
-
 set -e
 
 echo "=== Patient KLM Startup ==="
@@ -14,6 +11,10 @@ python seed_demo2.py
 echo ""
 echo "Seeding P-003 (Demo 3)..."
 python demo_3/seed_p003.py
+
+echo ""
+echo "Seeding PT-9921 (Dermatology)..."
+python seed_demo3.py
 
 echo ""
 echo "Starting endpoint server..."

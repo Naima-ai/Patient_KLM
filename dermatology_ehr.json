@@ -1,0 +1,222 @@
+[
+  {
+    "triple_id": "RT_PT9921_EHR_V1_01",
+    "head": "PT-9921",
+    "relation": "has_vital",
+    "tail": "resting_hr:74 bpm",
+    "confidence": 0.99,
+    "evidence_level": "I",
+    "source": "EHR:visit_2024-11-12",
+    "timestamp": "2024-11-12",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_EHR_V1_02",
+    "head": "PT-9921",
+    "relation": "has_vital",
+    "tail": "cortisol_am:19 mcg/dL",
+    "confidence": 0.99,
+    "evidence_level": "I",
+    "source": "EHR:visit_2024-11-12",
+    "timestamp": "2024-11-12",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_EHR_V1_03",
+    "head": "PT-9921",
+    "relation": "has_vital",
+    "tail": "blood_pressure:124/82",
+    "confidence": 0.99,
+    "evidence_level": "I",
+    "source": "EHR:visit_2024-11-12",
+    "timestamp": "2024-11-12",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_EHR_V1_04",
+    "head": "PT-9921",
+    "relation": "has_lab_value",
+    "tail": "PHQ-9_score:5 (Mild Anxiety/Dysthymia)",
+    "confidence": 0.95,
+    "evidence_level": "II",
+    "source": "EHR:visit_2024-11-12",
+    "timestamp": "2024-11-12",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_EHR_V1_05",
+    "head": "PT-9921",
+    "relation": "has_lab_value",
+    "tail": "stress_index:0.38",
+    "confidence": 0.90,
+    "evidence_level": "II",
+    "source": "EHR:visit_2024-11-12",
+    "timestamp": "2024-11-12",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_EHR_V1_06",
+    "head": "PT-9921",
+    "relation": "has_dermatology_finding",
+    "tail": "total_nevi_count:42",
+    "confidence": 0.99,
+    "evidence_level": "I",
+    "source": "EHR:visit_2024-11-12",
+    "timestamp": "2024-11-12",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_EHR_V1_07",
+    "head": "PT-9921",
+    "relation": "has_dermatology_finding",
+    "tail": "atypical_lesions:0",
+    "confidence": 0.99,
+    "evidence_level": "I",
+    "source": "EHR:visit_2024-11-12",
+    "timestamp": "2024-11-12",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_EHR_V1_08",
+    "head": "PT-9921",
+    "relation": "has_risk_profile",
+    "tail": "melanoma_risk:Elevated (CDKN2A/MC1R) - phenotypically latent at this visit",
+    "confidence": 0.92,
+    "evidence_level": "II",
+    "source": "EHR:visit_2024-11-12",
+    "timestamp": "2024-11-12",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_EHR_V1_09",
+    "head": "PT-9921",
+    "relation": "has_clinical_note",
+    "tail": "Pre-symptomatic stress phase. COMT rs4680 (G/A) correlates with high-arousal response to minor workplace stressors. Genomic markers suggest high vulnerability to prolonged cortisol exposure.",
+    "confidence": 0.90,
+    "evidence_level": "III",
+    "source": "EHR:visit_2024-11-12",
+    "timestamp": "2024-11-12",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_EHR_V2_01",
+    "head": "PT-9921",
+    "relation": "has_vital",
+    "tail": "resting_hr:84 bpm",
+    "confidence": 0.99,
+    "evidence_level": "I",
+    "source": "EHR:visit_2025-11-15",
+    "timestamp": "2025-11-15",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_EHR_V2_02",
+    "head": "PT-9921",
+    "relation": "has_vital",
+    "tail": "cortisol_am:28 mcg/dL",
+    "confidence": 0.99,
+    "evidence_level": "I",
+    "source": "EHR:visit_2025-11-15",
+    "timestamp": "2025-11-15",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_EHR_V2_03",
+    "head": "PT-9921",
+    "relation": "has_vital",
+    "tail": "blood_pressure:138/90",
+    "confidence": 0.99,
+    "evidence_level": "I",
+    "source": "EHR:visit_2025-11-15",
+    "timestamp": "2025-11-15",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_EHR_V2_04",
+    "head": "PT-9921",
+    "relation": "has_lab_value",
+    "tail": "PHQ-9_score:14 (Moderate Depression)",
+    "confidence": 0.95,
+    "evidence_level": "II",
+    "source": "EHR:visit_2025-11-15",
+    "timestamp": "2025-11-15",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_EHR_V2_05",
+    "head": "PT-9921",
+    "relation": "has_lab_value",
+    "tail": "stress_index:0.75",
+    "confidence": 0.90,
+    "evidence_level": "II",
+    "source": "EHR:visit_2025-11-15",
+    "timestamp": "2025-11-15",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_EHR_V2_06",
+    "head": "PT-9921",
+    "relation": "has_dermatology_finding",
+    "tail": "total_nevi_count:46 (increased from 42 over 12 months)",
+    "confidence": 0.99,
+    "evidence_level": "I",
+    "source": "EHR:visit_2025-11-15",
+    "timestamp": "2025-11-15",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_EHR_V2_07",
+    "head": "PT-9921",
+    "relation": "has_dermatology_finding",
+    "tail": "atypical_lesions:3 (biopsy status: monitoring, no active malignancy)",
+    "confidence": 0.99,
+    "evidence_level": "I",
+    "source": "EHR:visit_2025-11-15",
+    "timestamp": "2025-11-15",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_EHR_V2_08",
+    "head": "PT-9921",
+    "relation": "has_risk_profile",
+    "tail": "melanoma_risk:Actively escalating - stress-induced immunosuppression suspected (T-cell exhaustion reducing immunosurveillance of melanocytic lesions)",
+    "confidence": 0.88,
+    "evidence_level": "II",
+    "source": "EHR:visit_2025-11-15",
+    "timestamp": "2025-11-15",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_EHR_V2_09",
+    "head": "PT-9921",
+    "relation": "has_clinical_note",
+    "tail": "FKBP5-mediated HPA-axis dysregulation suspected. Cortisol persistently elevated (28 mcg/dL) despite weekend rest. System has moved from stable to chaotic state. Stress is now an active driver of melanoma risk trajectory, not merely a symptom.",
+    "confidence": 0.90,
+    "evidence_level": "III",
+    "source": "EHR:visit_2025-11-15",
+    "timestamp": "2025-11-15",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_PSYCH_01",
+    "head": "PT-9921",
+    "relation": "has_genomic_correlation",
+    "tail": "COMT_rs4680_G/A correlates with high-arousal workplace stress response - clinically observed 2024-11-12",
+    "confidence": 0.85,
+    "evidence_level": "II",
+    "source": "GENOMIC_CORRELATION",
+    "timestamp": "2024-11-12",
+    "klm_source": "patient_klm_dermatology"
+  },
+  {
+    "triple_id": "RT_PT9921_PSYCH_02",
+    "head": "PT-9921",
+    "relation": "has_genomic_correlation",
+    "tail": "FKBP5_rs136175_T/C - HPA-axis dysregulation confirmed by cortisol trajectory (19 -> 28 mcg/dL over 12 months)",
+    "confidence": 0.88,
+    "evidence_level": "II",
+    "source": "GENOMIC_CORRELATION",
+    "timestamp": "2025-11-15",
+    "klm_source": "patient_klm_dermatology"
+  }
+]

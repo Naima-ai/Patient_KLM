@@ -18,7 +18,7 @@ from anthropic import Anthropic
 # ── Config ────────────────────────────────────────────────────────────────────
 
 KLM_BASE_URL = os.environ.get("PATIENT_KLM_URL", "http://localhost:8001")
-ANTHROPIC_MODEL = "claude-sonnet-4-20250514"
+ANTHROPIC_MODEL = "claude-sonnet-4-6"
 
 DERMATOLOGY_KLM_SOURCES = [
     "patient_klm_dermatology",

@@ -8,7 +8,7 @@ structured knowledge triples in a SQLite database. These triples can be retrieve
 
 The KLM currently contains 4 patients across:
 
-## Patients
+## Some Patients
 
 | ID | Domain | Conditions |
 |---|---|---|
@@ -156,7 +156,7 @@ The KLM exposes 6 endpoints — 3 for reading data, 3 for writing new data.
             "timestamp": "2026-03-10"
           }'
 
-Part 2 — KLM Builder
+# Part 2 — KLM Builder
 Create your own Knowledge Models from any document or by combining existing patients. Useful for building guideline KLMs, research KLMs, or mixed patient + document KLMs for specialist agents.
 Step 1 — Create a new KLM
 bashPOST /klm/create
@@ -166,19 +166,18 @@ bashPOST /klm/create
 }
 Step 2a — Upload a document (auto-extracts triples via Claude)
 bashPOST /klm/cardiology_guidelines_2026/upload
-# Attach a .pdf, .txt, .md, or .csv file
-# Requires ANTHROPIC_API_KEY to be set
+Attach a .pdf, .txt, .md, or .csv file
 Step 2b — Import existing patients into the KLM
 bash# See what patients are available first
 GET /klm/list/patients_available
 
-# Import all triples for two patients
+Import all triples for two patients
 POST /klm/cardiology_guidelines_2026/import_patients
 {
     "patient_ids": ["P-001", "PT-8839-CR"]
 }
 
-# Or import only specific domains
+Or import only specific domains
 POST /klm/cardiology_guidelines_2026/import_patients
 {
     "patient_ids": ["PT-8839-CR"],
@@ -211,10 +210,10 @@ Other KLM endpoints
 bash# List all custom KLMs
 GET /klm/list
 
-# Search within a KLM
+## Search within a KLM
 GET /klm/cardiology_guidelines_2026/query?keyword=hypertension
 GET /klm/cardiology_guidelines_2026/query?relation=first_line_treatment
 GET /klm/cardiology_guidelines_2026/query?head=metformin&limit=10
 
-# Delete a KLM
+## Delete a KLM
 DELETE /klm/cardiology_guidelines_2026

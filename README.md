@@ -155,3 +155,66 @@ The KLM exposes 6 endpoints — 3 for reading data, 3 for writing new data.
             "source": "patient_intake_form",
             "timestamp": "2026-03-10"
           }'
+
+Part 2 — KLM Builder
+Create your own Knowledge Models from any document or by combining existing patients. Useful for building guideline KLMs, research KLMs, or mixed patient + document KLMs for specialist agents.
+Step 1 — Create a new KLM
+bashPOST /klm/create
+{
+    "klm_name": "cardiology_guidelines_2026",
+    "description": "ACC/AHA heart failure guidelines"
+}
+Step 2a — Upload a document (auto-extracts triples via Claude)
+bashPOST /klm/cardiology_guidelines_2026/upload
+# Attach a .pdf, .txt, .md, or .csv file
+# Requires ANTHROPIC_API_KEY to be set
+Step 2b — Import existing patients into the KLM
+bash# See what patients are available first
+GET /klm/list/patients_available
+
+# Import all triples for two patients
+POST /klm/cardiology_guidelines_2026/import_patients
+{
+    "patient_ids": ["P-001", "PT-8839-CR"]
+}
+
+# Or import only specific domains
+POST /klm/cardiology_guidelines_2026/import_patients
+{
+    "patient_ids": ["PT-8839-CR"],
+    "domains": ["patient_klm_nephrology", "patient_klm_cardiology"]
+}
+Step 2c — Add a triple manually
+bashPOST /klm/cardiology_guidelines_2026/triple
+{
+    "head": "ACE inhibitor",
+    "relation": "first_line_treatment",
+    "tail": "heart failure with reduced ejection fraction",
+    "confidence": 0.98,
+    "evidence_level": "I",
+    "source": "ACC_AHA_2022"
+}
+Step 3 — Use the KLM in an agent
+pythonimport requests
+
+triples = requests.get(
+    "http://localhost:8001/klm/cardiology_guidelines_2026/all"
+).json()["triples"]
+
+system_prompt = f"""You are a cardiology AI agent.
+Use this knowledge as ground truth when reasoning.
+
+KNOWLEDGE BASE:
+{triples}
+"""
+Other KLM endpoints
+bash# List all custom KLMs
+GET /klm/list
+
+# Search within a KLM
+GET /klm/cardiology_guidelines_2026/query?keyword=hypertension
+GET /klm/cardiology_guidelines_2026/query?relation=first_line_treatment
+GET /klm/cardiology_guidelines_2026/query?head=metformin&limit=10
+
+# Delete a KLM
+DELETE /klm/cardiology_guidelines_2026

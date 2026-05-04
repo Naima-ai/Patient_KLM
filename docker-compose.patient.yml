@@ -7,10 +7,13 @@ services:
       dockerfile: Dockerfile
     container_name: patient_klm
     ports:
-      - "8001:8001"
+      - "8001:8001"          # single port — both patient KLM and KLM builder
     environment:
       - PATIENT_KLM_DB_PATH=/app/data/patient_klm.db
+      - KLM_DIR=/app/data/custom_klms
+      # Optional — only needed for POST /klm/{name}/upload triple extraction.
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
     volumes:
-      # Mount data folder so the seeded DB persists across restarts
+      # patient_klm.db and custom_klms/ both persist across container restarts
       - ./data:/app/data
     restart: unless-stopped

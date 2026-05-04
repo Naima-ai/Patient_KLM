@@ -149,17 +149,17 @@ Rules:
 Return ONLY a JSON array. No explanation. No markdown. No extra text.
 Format exactly:
 [
-  {
+  {{
     "head": "...",
     "relation": "...",
     "tail": "...",
     "confidence": 0.90,
     "evidence_level": "II"
-  }
+  }}
 ]
 
 Document text:
-{text}
+__DOCUMENT_TEXT__
 """
 
 
@@ -185,7 +185,7 @@ def extract_triples_with_claude(text: str, source_name: str, klm_name: str) -> l
         max_tokens=4096,
         messages=[{
             "role": "user",
-            "content": EXTRACTION_PROMPT.format(text=truncated)
+            "content": EXTRACTION_PROMPT.replace("__DOCUMENT_TEXT__", truncated)
         }]
     )
 

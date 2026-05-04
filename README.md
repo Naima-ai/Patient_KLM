@@ -187,31 +187,42 @@ POST /klm/cardiology_guidelines_2026/import_patients
     "patient_ids": ["PT-8839-CR"],
     "domains": ["patient_klm_nephrology", "patient_klm_cardiology"]
 }
+
 Step 2c — Add a triple manually
+
 bashPOST /klm/cardiology_guidelines_2026/triple
+
 {
+
     "head": "ACE inhibitor",
     "relation": "first_line_treatment",
     "tail": "heart failure with reduced ejection fraction",
     "confidence": 0.98,
     "evidence_level": "I",
     "source": "ACC_AHA_2022"
+    
 }
+
+
 Step 3 — Use the KLM in an agent
-pythonimport requests
+
+python import requests
 
 triples = requests.get(
     "http://localhost:8001/klm/cardiology_guidelines_2026/all"
 ).json()["triples"]
 
 system_prompt = f"""You are a cardiology AI agent.
+
 Use this knowledge as ground truth when reasoning.
 
 KNOWLEDGE BASE:
 {triples}
 """
+
+
 Other KLM endpoints
-bash# List all custom KLMs
+
 GET /klm/list
 
 ## Search within a KLM

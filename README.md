@@ -157,13 +157,17 @@ The KLM exposes 6 endpoints — 3 for reading data, 3 for writing new data.
           }'
 
 # Part 2 — KLM Builder
-Create your own Knowledge Models from any document or by combining existing patients. Useful for building guideline KLMs, research KLMs, or mixed patient + document KLMs for specialist agents.
+Create your own Knowledge Models from any document or by combining existing patients. 
+
+
 Step 1 — Create a new KLM
 bashPOST /klm/create
 {
     "klm_name": "cardiology_guidelines_2026",
     "description": "ACC/AHA heart failure guidelines"
 }
+
+
 Step 2a — Upload a document (auto-extracts triples via Claude)
 bashPOST /klm/cardiology_guidelines_2026/upload
 Attach a .pdf, .txt, .md, or .csv file
